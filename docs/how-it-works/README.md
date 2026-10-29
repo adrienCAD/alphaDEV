@@ -1,0 +1,1 @@
+One markdown file per stage (seismic, geomodel, fluids, pore-pressure, simulation, surrogate, economics): method, inputs/outputs, what it replaces, how it is checked. Rendered into the "How the AI works" drawers.

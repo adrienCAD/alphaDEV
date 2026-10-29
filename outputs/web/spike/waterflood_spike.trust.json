@@ -1,0 +1,23 @@
+{
+  "stage": "waterflood_spike",
+  "method": "JutulDarcy 2D immiscible water-oil, correlated lognormal permeability, rate-controlled injector",
+  "inputs": [
+    "seed=42",
+    "grid=40x40",
+    "permeability: median 0.2 D, sigma_ln 0.6, corr length cells [8.0, 4.0] (placeholder)"
+  ],
+  "metrics": {
+    "runtime_s": 58.72,
+    "material_balance_rel_error": 4.579919452226022e-07,
+    "final_mean_sw": 0.6337551819627043,
+    "oil_recovery_factor": 0.5396546188162583
+  },
+  "checks": {
+    "saturations_sum_to_one": true,
+    "saturations_in_bounds": true,
+    "water_saturation_increased": true,
+    "sw_between_swc_and_1_minus_sor": true,
+    "water_material_balance": true
+  },
+  "notes": "Not fitted. Teapot Dome data is not downloaded and its license is unresolved (docs/data-licenses.md). Replace with values from alphajet.geomodel.fit_lognormal() on Teapot Dome core/log permeability once that is cleared. Runtime of the first run includes Julia compilation."
+}

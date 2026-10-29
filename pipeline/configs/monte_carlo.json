@@ -1,0 +1,46 @@
+{
+  "n_runs": 50,
+  "seed": 7,
+  "sampling": "latin_hypercube",
+  "base_config": "waterflood_spike.json",
+  "ranges": {
+    "median_darcy": {
+      "low": 0.05,
+      "high": 0.5,
+      "scale": "log"
+    },
+    "sigma_ln": {
+      "low": 0.3,
+      "high": 1.2,
+      "scale": "linear"
+    },
+    "corr_length_x_cells": {
+      "low": 3.0,
+      "high": 15.0,
+      "scale": "linear"
+    },
+    "corey_water": {
+      "low": 1.5,
+      "high": 4.0,
+      "scale": "linear"
+    },
+    "corey_oil": {
+      "low": 1.5,
+      "high": 4.0,
+      "scale": "linear"
+    },
+    "swc": {
+      "low": 0.15,
+      "high": 0.25,
+      "scale": "linear"
+    },
+    "sor": {
+      "low": 0.2,
+      "high": 0.3,
+      "scale": "linear"
+    }
+  },
+  "corr_anisotropy_y_over_x": 0.5,
+  "provenance": "placeholder",
+  "provenance_note": "Ranges are illustrative priors chosen for the spike, not calibrated to any field or dataset. Teapot Dome is not used (data not downloaded, license unresolved)."
+}

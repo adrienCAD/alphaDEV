@@ -1,0 +1,51 @@
+{
+  "stage": "monte_carlo_waterflood",
+  "method": "Latin-hypercube Monte Carlo (50 runs) of JutulDarcy 2D waterflood over permeability median, sigma, correlation length, Corey exponents, connate water and residual oil; one new field realisation per run",
+  "inputs": [
+    "mc_seed=7",
+    "field seeds=42..91",
+    "median_darcy: 0.05-0.5 (log)",
+    "sigma_ln: 0.3-1.2 (linear)",
+    "corr_length_x_cells: 3.0-15.0 (linear)",
+    "corey_water: 1.5-4.0 (linear)",
+    "corey_oil: 1.5-4.0 (linear)",
+    "swc: 0.15-0.25 (linear)",
+    "sor: 0.2-0.3 (linear)"
+  ],
+  "metrics": {
+    "n_runs": 50,
+    "n_runs_passing_checks": 50,
+    "oil_recovery_factor_final_P10": 0.5473211791618524,
+    "oil_recovery_factor_final_P50": 0.4899604885411717,
+    "oil_recovery_factor_final_P90": 0.4354224457809348,
+    "water_cut_final_P10": 0.8904407325111742,
+    "water_cut_final_P50": 0.8073349052274892,
+    "water_cut_final_P90": 0.6823786791325221,
+    "water_cut_first_report_max": 1.384647660029361e-05,
+    "first_report_year": 0.25,
+    "n_runs_with_breakthrough": 50,
+    "breakthrough_years_min_wct_0.01": 10.0,
+    "breakthrough_years_median_wct_0.01": 13.25,
+    "breakthrough_years_max_wct_0.01": 18.25,
+    "worst_material_balance_rel_error": 1.7755557617419982e-06,
+    "total_runtime_s": 433.5
+  },
+  "checks": {
+    "all_runs_pass_physics_checks": true,
+    "seeded_reproducible": true
+  },
+  "notes": "Ranges are illustrative priors chosen for the spike, not calibrated to any field or dataset. Teapot Dome is not used (data not downloaded, license unresolved). Material-balance check validates reported/integrated volumes (injected - produced = change in water in place at the report steps), not the solver's internal conservation. Median permeability has little effect on recovery because injection is rate-controlled in pore volumes: the same pore volumes go in whatever the permeability, which mainly changes pressure. P90 = low case, P10 = high case. Percentiles use runs that passed checks.",
+  "case_labels": {
+    "oil_recovery_factor": {
+      "P10": "high case (best)",
+      "P50": "mid case",
+      "P90": "low case (worst)"
+    },
+    "water_cut": {
+      "P10": "high case (worst)",
+      "P50": "mid case",
+      "P90": "low case (best)"
+    },
+    "note": "P90 is exceeded by 90 % of runs. For recovery factor P10 = high case (best); for water cut P10 = high water cut = worst case."
+  }
+}

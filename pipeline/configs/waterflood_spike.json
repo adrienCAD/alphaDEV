@@ -1,0 +1,45 @@
+{
+  "seed": 42,
+  "grid": {
+    "nx": 40,
+    "ny": 40,
+    "dx_m": 20.0,
+    "dy_m": 20.0,
+    "thickness_m": 20.0
+  },
+  "years": 20,
+  "report_steps_per_year": 4,
+  "porosity": 0.2,
+  "initial": {
+    "pressure_bar": 200.0
+  },
+  "controls": {
+    "injected_pore_volumes": 0.5,
+    "producer_bhp_bar": 150.0
+  },
+  "fluids": {
+    "rho_w": 1000.0,
+    "rho_o": 800.0,
+    "corey_exponents": [
+      2.0,
+      2.0
+    ],
+    "swc": 0.2,
+    "sor": 0.25
+  },
+  "permeability": {
+    "median_darcy": 0.2,
+    "sigma_ln": 0.6,
+    "corr_length_cells": [
+      8.0,
+      4.0
+    ],
+    "provenance": "placeholder",
+    "provenance_note": "Not fitted. Teapot Dome data is not downloaded and its license is unresolved (docs/data-licenses.md). Replace with values from alphajet.geomodel.fit_lognormal() on Teapot Dome core/log permeability once that is cleared."
+  },
+  "checks": {
+    "material_balance_rel_tol": 0.001,
+    "breakthrough_water_cut": 0.01,
+    "saturation_endpoint_tol": 0.005
+  }
+}

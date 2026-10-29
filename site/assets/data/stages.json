@@ -1,0 +1,8 @@
+[
+  {"id":"seismic","title":"1. Seismic interpretation","tech":"U-Net fault detection and seeded horizon tracking, with confidence maps and well ties.","operator":"Weeks of manual picking reduced to hours, with every pick traceable."},
+  {"id":"geomodel","title":"2. Geomodel","tech":"Facies and property modeling with seismic as secondary variable; cross-validated.","operator":"A consistent, uncertainty-aware reservoir model to plan wells against."},
+  {"id":"fluids","title":"3. Fluids and PVT","tech":"EOS/correlation PVT tuned to data, with phase envelopes and residuals.","operator":"Realistic fluid behavior feeding recovery and EOR decisions."},
+  {"id":"simulation","title":"4. Simulation and surrogate","tech":"Open-source simulator plus a surrogate validated against it; runs in the browser.","operator":"Scenario answers in milliseconds, with the error shown."},
+  {"id":"forecast","title":"5. Forecast and risk","tech":"Monte Carlo P10/P50/P90 and tornado sensitivity.","operator":"Defensible ranges instead of single-number forecasts."},
+  {"id":"economics","title":"6. Economics","tech":"NPV and breakeven propagated from the forecast distribution.","operator":"Development decisions tied to value and downside."}
+]
